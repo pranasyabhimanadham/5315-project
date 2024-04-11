@@ -1,0 +1,19 @@
+<!-- searchResults.handlebars -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="/5315-project/public/styles.css">
+</head>
+<body>
+    <h1>Search Results</h1>
+    <ul>
+        {{#each restaurants}}
+            <li>{{this.name}} - {{this.borough}} - {{this.cuisine}}</li>
+        {{/each}}
+    </ul>
+</body>
+</html>
