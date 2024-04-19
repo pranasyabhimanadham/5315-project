@@ -18,6 +18,7 @@ const path = require("path");
 
 const app = express();
 const database = require("./config/database");
+const { handleSearch } = require("./config/database");
 const port = process.env.PORT;
 
 app.use(express.static(path.join(__dirname, "public")));
@@ -406,9 +407,10 @@ database
     );
     
 // Start the server
-app.listen(port, () => {
+const server= app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
+module.exports = app;
   })
   .catch((error) => {
     console.error("Error initializing app:", error.message);
