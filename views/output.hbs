@@ -1,0 +1,31 @@
+<div class="restaurant-list" style="margin-top: 20px; font-family: 'Arial', sans-serif;">
+  <h2 style="margin-bottom: 20px; text-align: center; font-weight: bold; color: #333;">Restaurant Results</h2>
+  <table style="width: 100%; border-collapse: collapse; background-color: #fff; border: 1px solid #ccc;">
+    <thead>
+      <tr>
+        <th style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;">Name</th>
+        <th style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;">Restaurant ID</th>
+        <th style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;">Cuisine</th>
+        <th style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;">Address</th>
+        <th style="padding: 10px; background-color: #f2f2f2; border: 1px solid #ccc;">Grades</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each restaurants}}
+        <tr>
+          <td style="padding: 10px; border: 1px solid #ccc;">{{this.name}}</td>
+          <td style="padding: 10px; border: 1px solid #ccc;">{{this.restaurant_id}}</td>
+          <td style="padding: 10px; border: 1px solid #ccc;">{{this.cuisine}}</td>
+          <td style="padding: 10px; border: 1px solid #ccc;">{{this.address.building}} {{this.address.street}}, {{this.address.zipcode}}</td>
+          <td style="padding: 10px; border: 1px solid #ccc;">
+            <ul style="margin: 0; padding-left: 20px;">
+              {{#each this.grades}}
+                <li>Date: {{date}}, Grade: {{grade}}, Score: {{score}}</li>
+              {{/each}}
+            </ul>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
