@@ -407,10 +407,9 @@ database
     );
     
 // Start the server
-const server= app.listen(port, () => {
+app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
-module.exports = app;
   })
   .catch((error) => {
     console.error("Error initializing app:", error.message);
