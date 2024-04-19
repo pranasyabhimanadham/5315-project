@@ -18,7 +18,6 @@ const path = require("path");
 
 const app = express();
 const database = require("./config/database");
-const { handleSearch } = require("./config/database");
 const port = process.env.PORT;
 
 app.use(express.static(path.join(__dirname, "public")));

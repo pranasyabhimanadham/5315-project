@@ -9,7 +9,7 @@ Name: Sai Pranasya Student ID: N01582877 Date: 07/04/2024
 ******************************************************************************/
 require("dotenv").config();
 const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const UserModel = require("../models/user");
 const RestaurantModel = require("../models/restaurants");
